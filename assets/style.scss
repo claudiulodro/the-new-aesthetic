@@ -1,0 +1,208 @@
+/*
+Theme Name: The New Aesthetic
+Theme URI: https://lodro.gallery/
+Author: LODRO.GALLERY
+Author URI: https://lodro.gallery/
+Description: 
+Version: 1.0.0
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+*/
+
+$site_width: 1400px;
+
+@font-face {
+	font-family: Old London;
+	src: url( 'assets/OldLondon.ttf' );
+}
+
+body {
+	font-family: arial;
+	padding: 24px;
+	overflow-x: hidden;
+	background: url( 'assets/background.png' );
+	background-size: 1200px 2400px;
+	-webkit-transition:background-position .1s;  
+    -moz-transition:background-position .1s;  
+    -o-transition:background-position .1s;  
+    transition:background-position .1s; 
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.site-container {
+	max-width: $site_width;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content-container {
+	width: 75%;
+	float: left;
+	font-size: 24px;
+	line-height: 1.4em;
+	background-color: #ffffff;
+
+	a {
+		color: #000000;
+		font-weight: bold;
+		text-decoration: underline;
+		text-shadow: 1px 1px;
+
+	}
+
+	.post-title {
+		color: #ffc0cc;
+		font-size: 2em;
+		text-shadow: 3px 3px;
+		text-transform: uppercase;
+		line-height: 1.2em;
+	}
+
+	p.alignright {
+		text-align: right;
+		font-weight: bold;
+	}
+
+	.post-content {
+		padding-bottom: 4em;
+	}
+}
+
+.navigation {
+	width: 20%;
+	margin-right: 5%;
+	float: left;
+	font-size: 32px;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 1.2em;
+
+	a {
+		text-decoration: none;
+		color: #000000;
+		font-weight: bolder;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		word-wrap: break-word;
+	}
+
+	li {
+		margin-bottom: 1.2em;
+	}
+
+	.current-menu-item a {
+		text-shadow: 2px 2px;
+		color: #e0c178;
+	}
+}
+
+.site-title {
+	font-family: Old London;
+	font-size: 5.5vw;
+
+	h1 {
+		font-weight: normal;
+		margin: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000000;
+	}
+}
+
+footer {
+	clear: both;
+	text-align: center;
+	font-size: 20px;
+	border-top: 3px solid #000000;
+	margin-top: 2em;
+	padding-top: 2em;
+
+	.site-description {
+		margin-bottom: 2em;
+		font-weight: bolder;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		display: inline;
+		padding: .5em;
+		border-right: 1px solid #000000;
+
+		&:first-of-type {
+			padding-left: 0;
+		}
+
+		&:last-of-type {
+			padding-right: 0;
+			border-right: none;
+		}
+	}
+
+	a {
+		color: #000000;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.copyright {
+		margin-top: 2em;
+	}
+}
+
+// Large screens.
+@media screen and (min-width: $site-width) {
+	.site-title {
+		font-size: 84px;
+	}
+}
+
+// Small screens.
+@media screen and (max-width: 800px) {
+	body {
+		background-size: 100%;
+	}
+
+	.site-title {
+		font-size: 5vw;
+	}
+
+	.navigation {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		font-size: 18px;
+
+		li {
+			display: inline-block;
+			margin: .5em;
+		}
+	}
+
+	.content-container {
+		width: 100%;
+		margin: 0;
+		font-size: 16px;
+	}
+
+	footer {
+		font-size: 18px;
+	}
+}
